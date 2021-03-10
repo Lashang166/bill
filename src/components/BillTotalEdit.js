@@ -84,7 +84,7 @@ export default function BillTotal({
     if(role === "Sale"){
 
       // (จำนวน * agentcommission) + ((จำนวน * ราคา) * agentpercent%)
-      let dis = (Amount * commission) + ((Amount * TotalValue) * (percent / 100))
+      let dis = (Amount * commission) + TotalValue * (percent / 100)
       console.log("amount", Amount);
       console.log("commission", commission);
       console.log("TotalValue", TotalValue); 

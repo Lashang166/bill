@@ -144,8 +144,9 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
     if(isNaN(Amount)){
       Amount = 0;
     }
+    console.log("totolvalue",totalValue);
 
-    return totalValue + Amount * parseFloat(item.PricePerUnit);
+    return  + Amount * parseFloat(item.PricePerUnit);
   }, 0);
   let postalCharge = billDataData.ShipTypes.reduce(
     (Value, ShipType) =>

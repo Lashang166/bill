@@ -39,6 +39,7 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
   const [choosesku, setChoosesku] = useState("");
   const [isDisplayHasAmount, setIsDisplayHasAmount] = useState(false);
   const [displayAmount, setDisplayAmount] = useState(0);
+  const [role, setRole] = useState("")
 
   //console.log("items = ", items);
   //console.log("searchItems = ", searchitems);
@@ -46,6 +47,7 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
 
   useEffect(() => {
     const userInfo = store.get("user");
+    setRole(userInfo.amrole);
     setToken(userInfo.amtk);
     //console.log("user = " + userInfo.amtk);
   }, []);
@@ -216,38 +218,59 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
                 {item.Description} <br />[{item.SKU}]
               </div>
             </div>
+
+
+
             <div className="column is-3 has-text-right">
-              <p className="control has-icons-left ">
-                <input type="number"
-                  className="input is-small is-pulled-right has-text-right"
-                  value={item.PricePerUnit}
-                  onChange={e => {
-                    changePrice(idx, e);
-                  }}
-                  onFocus={e => {
-                    focusItem(e);
-                  }}
-                />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-tags" />
-                </span>
-              </p>
-              <p className="control has-icons-left">
-                <input type="number"
-                  className="input is-small is-pulled-right has-text-right"
-                  value={item.Amount}
-                  onChange={e => {
-                    changeQty(idx, e);
-                  }}
-                  onFocus={e => {
-                    focusItem(e);
-                  }}
-                  style={{ marginTop: "3px" }}
-                />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-sort-numeric-down" />
-                </span>
-              </p>
+              {/* ========== Edit =============== */}
+              {
+                role === "Sale" ?
+                <p className="control has-icons-left ">{item.PricePerUnit} บาท</p>
+                :
+                <p className="control has-icons-left ">
+                  <input type="number"
+                    className="input is-small is-pulled-right has-text-right"
+                    value={item.PricePerUnit}
+                    onChange={e => {
+                      changePrice(idx, e);
+                    }}
+                    onFocus={e => {
+                      focusItem(e);
+                    }}
+                  />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-tags" />
+                  </span>
+                </p>
+              }
+              {
+                role === "Sale" ? 
+                <p className="control  has-icons-left">
+                  {item.Amount} ชิ้น
+                </p>
+                :
+                <p className="control has-icons-left">
+                  <input type="number"
+                    className="input is-small is-pulled-right has-text-right"
+                    value={item.Amount}
+                    onChange={e => {
+                      changeQty(idx, e);
+                    }}
+                    onFocus={e => {
+                      focusItem(e);
+                    }}
+                    style={{ marginTop: "3px" }}
+                  />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-sort-numeric-down" />
+                  </span>
+                </p>
+
+              }
+              
+              {/* ========== Edit =============== */}
+
+
               <span className="is-pulled-right">
                 {formatMoney(
                   parseFloat(item.Amount) * parseFloat(item.PricePerUnit)
@@ -275,6 +298,8 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
           <i className="fas fa-times"> </i> &nbsp; ยกเลิก
         </a>
       )}{" "}
+
+
       {editBill ? (
         <div className="field is-grouped">
           <br />
@@ -302,6 +327,10 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
             />All
             </div>
         </div>
+
+
+
+
       ) : null}
       {editBill ? (
         <div className="columns is-multiline is-mobile is-gapless">
