@@ -8,6 +8,7 @@ import { BillInfoProvider }  from "./contexts/billInfo/billInfo.provider";
 import { SelectedProductEditProvider } from "./contexts/selectedProductEdit/SelectedProductEdit.provider";
 import { BaseProvider } from 'baseui';
 import { DrawerProvider } from './contexts/drawerProduct/DrawerContext';
+// import { DrawerProvider } from './contexts/drawerProduct/DrawerContext';
 import { Client as Styletron } from 'styletron-engine-atomic';
 import { Provider as StyletronProvider } from 'styletron-react';
 
@@ -20,10 +21,10 @@ class App extends Component {
       <BillInfoProvider>
       <StyletronProvider value={engine}>
       <BaseProvider theme={theme}>
-      <DrawerProvider>
+      {/* <DrawerProvider> */}
         <Routes />
         <NotificationContainer/>
-      </DrawerProvider>
+      {/* </DrawerProvider> */}
       </BaseProvider>
       </StyletronProvider>
       </BillInfoProvider>

@@ -1,4 +1,5 @@
 import { useCreateContext } from './create-context';
+import React from 'react'
 const initialState = {
     isOpen: false,
     drawerComponent: null,
@@ -29,7 +30,22 @@ function reducer(state, action) {
             return state;
     }
 }
-const [useDrawerState, useDrawerDispatch, DrawerProvider] = useCreateContext(initialState, reducer);
+//const [useDrawerState, useDrawerDispatch, DrawerProvider] = useCreateContext(initialState, reducer);
+class useDrawerState extends React.Component {
+    render() {
+      return <h1>Hello, {this.props.name}</h1>;
+    }
+  }
+  class useDrawerDispatch extends React.Component {
+    render() {
+      return <h1>Hello, {this.props.name}</h1>;
+    }
+  }
+  class DrawerProvider extends React.Component {
+    render() {
+      return <h1>Hello, {this.props.name}</h1>;
+    }
+  }
 
 export { useDrawerState, useDrawerDispatch, DrawerProvider };
  
