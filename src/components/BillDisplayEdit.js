@@ -144,7 +144,6 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
     if(isNaN(Amount)){
       Amount = 0;
     }
-    console.log("totolvalue",totalValue);
 
     return  + Amount * parseFloat(item.PricePerUnit);
   }, 0);

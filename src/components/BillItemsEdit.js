@@ -243,12 +243,7 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
                   </span>
                 </p>
               }
-              {
-                role === "Sale" ? 
-                <p className="control  has-icons-left">
-                  {item.Amount} ชิ้น
-                </p>
-                :
+          
                 <p className="control has-icons-left">
                   <input type="number"
                     className="input is-small is-pulled-right has-text-right"
@@ -266,7 +261,7 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
                   </span>
                 </p>
 
-              }
+              
               
               {/* ========== Edit =============== */}
 
