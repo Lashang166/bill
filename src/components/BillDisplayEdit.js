@@ -135,11 +135,12 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
           : 0
       );*/
   
-  let Amount;
+  let Amount = 0;
+  
 
   let total = billDataData.items.reduce((totalValue, item) => {
 
-    Amount = parseFloat(item.Amount);
+    Amount += parseFloat(item.Amount);
 
     if(isNaN(Amount)){
       Amount = 0;
@@ -147,12 +148,15 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
 
     return  + Amount * parseFloat(item.PricePerUnit);
   }, 0);
+
   let postalCharge = billDataData.ShipTypes.reduce(
     (Value, ShipType) =>
       Value +
       (ShipType.id === SelectShipId ? parseFloat(ShipType.rate) : 0),
     0
   );
+
+
   const onClickConfirm = () => {
 
     const params = {
