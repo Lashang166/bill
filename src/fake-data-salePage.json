@@ -1,0 +1,97 @@
+{
+	"imageSlide" : [
+		{"image": "xxx"},
+		{"image": "xxx"},
+		{"image": "xxx"}
+	],
+	"price" : {
+		"salePrice": 100,
+		"saleAmount": 50
+	},
+	"flashSale" : {
+		"active" : 1 ,
+		"countDownTime" : "03:00:00"
+	},
+	"payment" : [
+		{"type": "cash"},
+		{"type": "Credit Card"},
+		{"type": "xxx"}
+	],
+	"courier" : [
+		{"type": "EMS"},
+		{"type": "Kerry"},
+		{"type": "xxx"}
+	],
+	"products" : {
+		"SelectProducts": [
+		  {
+			"selectProductName1": "รองเท้าไนกี้",
+			"image": "url",
+			"selectProductName2": [
+			  {
+				"selectProduct2": "แดง 1",
+				"price": "10",
+				"stock": "20",
+				"SKU": "002"
+			  },
+			  {
+				"selectProduct2": "เขียว 2",
+				"price": "10",
+				"stock": "20",
+				"SKU": "003"
+			  },
+			  {
+				"selectProduct2": "เขียว 3",
+				"price": "10",
+				"stock": "20",
+				"SKU": "004"
+			  },
+			  {
+				"selectProduct2": "เขียว 4",
+				"price": "10",
+				"stock": "20",
+				"SKU": "005"
+			  },
+			  {
+				"selectProduct2": "เขียว 5",
+				"price": "10",
+				"stock": "20",
+				"SKU": "006"
+			  },
+			  {
+				"selectProduct2": "เขียว 6",
+				"price": "10",
+				"stock": "20",
+				"SKU": "007"
+			  },
+			  {
+				"selectProduct2": "เขียว 7",
+				"price": "10",
+				"stock": "20",
+				"SKU": "008"
+			  },
+			  {
+				"selectProduct2": "ดำ 8",
+				"price": "10",
+				"stock": "20",
+				"SKU": "009"
+			  }
+			]
+		  },
+		  {
+			"selectProductName1": "ครีมกันแดด",
+			"image": "url",
+			"price": "10",
+			"stock": "20",
+			"SKU": "010"
+		  },
+		  {
+			"selectProductName1": "อาหารเสริม",
+			"image": "url",
+			"price": "10",
+			"stock": "20",
+			"SKU": "011"
+		  }
+		]
+	  }
+}

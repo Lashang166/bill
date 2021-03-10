@@ -1,0 +1,34 @@
+{
+ "BillDate":"2019-03-29",
+ "BillDue":"2019-04-07",
+ "VID":49,
+ "VName":"Vendor Name 01",
+ "VLogo":"https://www.designevo.com\/res\/templates\/thumb_small\/blue-square-and-virtual-world.png",
+ "VAddr":"Vendor Address 01",
+ "DiscountType":"VALUE",
+ "DiscountValue":0,
+ "AgentCode":"AGENT-01",
+ "AgentName":"Agent Name 01",
+ "AgentMobile":"09xxxxxxxx",
+ "AgentCommission":10,
+ "AgentPercent":10,
+ "AgentUrl":"https://www.designevo.com\/res\/templates\/thumb_small\/blue-square-and-virtual-world.png",
+ "Active":1,
+ "data":{
+  "ShipTypes":[
+    {"description":"EMS","rate":30,"id":1},
+    {"description":"LALAMOVE","rate":100,"id":2}
+   ],
+  "BankAccounts":[
+   {"type":"COD"},
+   {
+    "BankName":"Bangkok Bank",
+    "abbr":"bbl",
+    "BankOwner":"\u0e0a\u0e37\u0e48\u0e2d\u0e40\u0e08\u0e49\u0e32\u0e02\u0e2d\u0e07\u0e1a\u0e31\u0e0d\u0e0a\u0e35",
+    "BankAccNo":"123-45678-90"}
+  ],
+  "items":[
+    {"SKU":"SKU1","Description":"Item description 1","UnitName":"unit","PricePerUnit":120,"Amount":2,"image":"https://www.designevo.com\/res\/templates\/thumb_small\/blue-square-and-virtual-world.png"},
+    {"SKU":"SKU2","Description":"Item description 2","UnitName":"unit","PricePerUnit":100,"Amount":1,"image":"https://www.designevo.com\/res\/templates\/thumb_small\/blue-square-and-virtual-world.png"}]
+   }
+}

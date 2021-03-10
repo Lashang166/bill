@@ -1,0 +1,87 @@
+.hero-head.border-bottom {
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+}
+.has-border {
+  border: 1px solid hsl(0, 0%, 86%);
+}
+.has-round-border {
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 6px;
+}
+
+.my-space-bottom {
+  margin-bottom: 1.5rem;
+}
+
+.my-space-left {
+  margin-left: 1rem;
+}
+
+
+.my-margin-top {
+  margin-top: 1em;
+}
+
+.my-margin-bottom {
+  margin-bottom: 1em;
+}
+
+.my-padding {
+  padding: 6px;
+}
+
+.my-padding-left {
+  padding-left: 6px;
+}
+
+.my-padding-right {
+  padding-right: 6px;
+}
+
+.my-padding-top {
+  padding-top: 6px;
+}
+
+.my-padding-bottom {
+  padding-bottom: 6px;
+}
+
+.steps-segment.is-active:after {
+  background-color: #dbdbdb;
+}
+
+.steps-segment.is-active ~ .steps-segment:after {
+  background-color: #dbdbdb;
+}
+.steps:not(.is-hollow)
+  .steps-segment.is-active
+  ~ .steps-segment
+  .steps-marker:not(.is-hollow) {
+  background-color: #dbdbdb;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.steps.is-hollow .steps-segment.is-active ~ .steps-segment .steps-marker,
+.steps-segment.is-active ~ .steps-segment .steps-marker.is-hollow {
+  border-color: #dbdbdb;
+}
+
+/* .steps-segment.is-active:before ~ .steps-segment.is-active {
+  background-color: red;
+} */
+
+.steps-segment {
+  direction: rtl;
+}
+
+.steps:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.my-fix-hero-padding-top {
+  padding: 1rem 1rem;
+}
+
+.my-widthless {
+  width : auto !important;
+}

@@ -1,0 +1,20 @@
+{
+  "id": "18",
+  "BillNo": "ET9VY",
+  "BillDate": "2019-02-03",
+  "BillDue": "2019-02-10",
+  "BillStatus": "1.0",
+  "BillErrorText": "",
+  "VID": "1",
+  "VName": "Dooley, Flatley and West",
+  "VLogo": "https://s3.amazonaws.com/uifaces/faces/twitter/sindresorhus/128.jpg",
+  "VAddr": "94238 Violet Trail",
+  "TrackingNo": "",
+  "DiscountType": "PERCENTAGE",
+  "DiscountValue": "97.00",
+  "Data": "{\"ShipTypes\":[{\"id\":1,\"description\":\"EMS\",\"rate\":30},{\"id\":2,\"description\":\"Kerry Express\",\"rate\":100}],\"BankAccounts\":[{\"id\":0,\"type\":\"COD\"},{\"id\":1,\"BankName\":\"Orn Inc\",\"BankAccNo\":\"66462455\",\"BankBranch\":\"Anguilla\"},{\"id\":2,\"BankName\":\"Runolfsdottir Group\",\"BankAccNo\":\"77439152\",\"BankBranch\":\"Finland\"}],\"items\":[{\"SKU\":\"N6S090G2\",\"Description\":\"Towels\",\"UnitName\":\"ชิ้น\",\"PricePerUnit\":122,\"image\":\"./assets/productmockup.jpg\",\"Amount\":4},{\"SKU\":\"QCMF119I\",\"Description\":\"Mouse\",\"UnitName\":\"ชิ้น\",\"PricePerUnit\":638,\"image\":\"./assets/productmockup.jpg\",\"Amount\":4},{\"SKU\":\"6WEHKO29\",\"Description\":\"Keyboard\",\"UnitName\":\"ชิ้น\",\"PricePerUnit\":694,\"image\":\"./assets/productmockup.jpg\",\"Amount\":5},{\"SKU\":\"RQKN904Z\",\"Description\":\"Mouse\",\"UnitName\":\"ชิ้น\",\"PricePerUnit\":896,\"image\":\"./assets/productmockup.jpg\",\"Amount\":5},{\"SKU\":\"GC3T9EA8\",\"Description\":\"Pants\",\"UnitName\":\"ชิ้น\",\"PricePerUnit\":271,\"image\":\"./assets/productmockup.jpg\",\"Amount\":3}],\"note\":\"ทดสอบเทส\",\"ShippingAddress\":{\"Name\":\"สม\",\"Address\":\"1234\",\"SubDistrict\":\"วังทองหลาง\",\"District\":\"วังทองหลาง\",\"Province\":\"กรุงเทพมหานคร\",\"Postcode\":\"10310\",\"Mobile\":\"08xxxxxxxx\"}",
+  "AdminID": "xxxx",
+  "AdminName": "xxxx",
+  "AdminMobile": "09xxxxxxxx",
+  "AdminCommission": "100.00"
+}

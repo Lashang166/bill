@@ -1,0 +1,218 @@
+{
+  "BillNo": "9401192256",
+  "BillDate": "2020-01-19",
+  "BillDue": "2020-01-26",
+  "Data": {
+    "ShipTypes": [
+      {
+        "id": "1",
+        "vid": "94",
+        "expid": "7",
+        "shipname": "EMS",
+        "calf": "0",
+        "caln": "0",
+        "shipdesc": "ฟรีค่าส่ง EMS"
+      },
+      {
+        "id": "2",
+        "vid": "94",
+        "expid": "5",
+        "shipname": "DHL",
+        "calf": "40",
+        "caln": "0",
+        "shipdesc": "DHL eCommece"
+      },
+      {
+        "id": "3",
+        "vid": "94",
+        "expid": "6",
+        "shipname": "Kerry",
+        "calf": "50",
+        "caln": "0",
+        "shipdesc": "Kerry Coperate"
+      },
+      {
+        "id": "5",
+        "vid": "94",
+        "expid": "2",
+        "shipname": "EMS Shop",
+        "calf": "20",
+        "caln": "10",
+        "shipdesc": "ชิ้นแรก 20 บาท ต่อไปเพิ่ม 10 บาท"
+      },
+      {
+        "id": "6",
+        "vid": "94",
+        "expid": "3",
+        "shipname": "Kerry Shop",
+        "calf": "0",
+        "caln": "0",
+        "shipdesc": "ฟรีค่าจัดส่ง"
+      }
+    ],
+    "PaymentMedthod": [
+      {
+        "id": "1",
+        "vid": "94",
+        "bankid": "32",
+        "abbr": "prompay",
+        "accn": "",
+        "accno": ""
+      },
+      {
+        "id": "2",
+        "vid": "94",
+        "bankid": "3",
+        "abbr": "ธนาคารกรุงเทพ",
+        "accn": "ไอสบาย ขายดี",
+        "accno": "9876543210"
+      },
+      {
+        "id": "3",
+        "vid": "94",
+        "bankid": "11",
+        "abbr": "uobt",
+        "accn": "uopb",
+        "accno": "999999999"
+      },
+      {
+        "id": "4",
+        "vid": "94",
+        "bankid": "5",
+        "abbr": "TMB",
+        "accn": "tmmbb",
+        "accno": "12321312321"
+      }
+    ],
+    "Items": [
+      {
+        "PID": "7479",
+        "SKU": "skbu001",
+        "ProductImageUrl": {
+          "thumb": "/img/sc_prod/7474/7479-i-1.jpg",
+          "image": "/img/sc_prod/7474/7479-1.jpg"
+        },
+        "Title": "ครีมทาฝ้า",
+        "categoryID": "3",
+        "PricePerUnit": "690.00",
+        "InStock": 1000,
+        "Amount": 0
+      },
+      {
+        "PID": "7153",
+        "SKU": "SKRB001",
+        "ProductImageUrl": {
+          "thumb": "/img/sc_prod/7148/7153-i-1.jpg",
+          "image": "/img/sc_prod/7148/7153-1.jpg"
+        },
+        "Title": "Ombré ECLIPSE FACIAL SOAP",
+        "categoryID": "3",
+        "PricePerUnit": "95.00",
+        "InStock": 948,
+        "Amount": 0
+      },
+      {
+        "PID": "6502",
+        "SKU": "SKRB002",
+        "ProductImageUrl": {
+          "thumb": "/img/sc_prod/6497/6502-i-1.jpg",
+          "image": "/img/sc_prod/6497/6502-1.jpg"
+        },
+        "Title": "Plus Size Floral Handkerchief Skirted Tankini Set",
+        "categoryID": "1",
+        "PricePerUnit": "590.00",
+        "InStock": 990,
+        "Amount": 0
+      },
+      {
+        "PID": "79",
+        "SKU": "SKRB003",
+        "ProductImageUrl": {
+          "thumb": "/img/sc_prod/74/79-i-1.jpg",
+          "image": "/img/sc_prod/74/79-1.jpg"
+        },
+        "Title": "เสื้อเชิตสีขาว Xl (น้ำหนัก 250 กรัม)",
+        "categoryID": "2",
+        "PricePerUnit": "350.00",
+        "InStock": 986,
+        "Amount": 0
+      },
+      {
+        "PID": "80",
+        "SKU": "SKRB004",
+        "ProductImageUrl": {
+          "thumb": "/img/sc_prod/75/80-i-1.jpg",
+          "image": "/img/sc_prod/75/80-1.jpg"
+        },
+        "Title": "ครีมแต้มสิว (น้ำหนัก 25 กรัม)",
+        "categoryID": "3",
+        "PricePerUnit": "550.00",
+        "InStock": 935,
+        "Amount": 0
+      },
+      {
+        "PID": "5991",
+        "SKU": "SKRB005",
+        "ProductImageUrl": {
+          "thumb": "/img/sc_prod/5986/5991-i-1.jpg",
+          "image": "/img/sc_prod/5986/5991-1.jpg"
+        },
+        "Title": "รองเท้าผ้าใบแฟชั่น ผู้หญิง สีแดง (น้ำหนัก 650 กรัม)",
+        "categoryID": "1",
+        "PricePerUnit": "800.00",
+        "InStock": 44,
+        "Amount": 0
+      },
+      {
+        "PID": "6360",
+        "SKU": "SKRB006",
+        "ProductImageUrl": {
+          "thumb": "/img/sc_prod/6355/6360-i-1.jpg",
+          "image": "/img/sc_prod/6355/6360-1.jpg"
+        },
+        "Title": "เคสกันกระแทก",
+        "categoryID": "8",
+        "PricePerUnit": "390.00",
+        "InStock": 1965,
+        "Amount": 0
+      },
+      {
+        "PID": "6359",
+        "SKU": "SKRB007",
+        "ProductImageUrl": {
+          "thumb": "/img/sc_prod/6354/6359-i-1.jpg",
+          "image": "/img/sc_prod/6354/6359-1.jpg"
+        },
+        "Title": "Weaving case",
+        "categoryID": "8",
+        "PricePerUnit": "390.00",
+        "InStock": 1916,
+        "Amount": 0
+      },
+      {
+        "PID": "7426",
+        "SKU": "SKRB008",
+        "ProductImageUrl": {
+          "thumb": "/img/sc_prod/7421/7426-i-1.jpg",
+          "image": "/img/sc_prod/7421/7426-1.jpg"
+        },
+        "Title": "รองเท้าผ้าใบ",
+        "categoryID": "1",
+        "PricePerUnit": "500.00",
+        "InStock": 951,
+        "Amount": 0
+      }
+    ]
+  },
+  "adtoken": "67jok8ynapac6l1goqo6",
+  "adname": "แอดก้อย",
+  "adcode": "A001",
+  "adtel": "08898715642453",
+  "adlink": "www.i-sabuy.com",
+  "adcom": "200",
+  "adpercent": "0",
+  "DiscountType": "PERCENTAGEVALUE",
+  "DuscountValue": 0,
+  "VenderID": "94",
+  "Datachannel": "BILLONLINE"
+}

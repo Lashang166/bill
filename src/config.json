@@ -1,0 +1,69 @@
+{
+  "billTitle": "I-Sabuy Billing System",
+  "billSubtitle": "ระบบชำระสินค้าออนไลน์",
+  "billStatus": [
+    {
+      "id": 0.2,
+      "text": "บิลนี้ถูกยกเลิกแล้ว",
+      "description": "บิลนี้ถูกยกเลิกแล้ว",
+      "textColor": "#FFFFFF",
+      "backgroundColor": "message is-danger my-margin-top"
+    },
+    {
+      "id": 0.0,
+      "text": "ร่าง (Admin Only)",
+      "description": "กรุณาตรวจสอบสินค้าและการจัดส่ง",
+      "textColor": "#FFFFFF",
+      "backgroundColor": "message is-info my-margin-top"
+    },
+    {
+      "id": 1.0,
+      "text": "รอลูกค้าชำระเงิน",
+      "description": "กรุณาเลือกวิธีชำระเงินค่ะ",
+      "textColor": "#FFFFFF",
+      "backgroundColor": "message is-warning my-margin-top"
+    },
+    {
+      "id": 2.0,
+      "text": "รอข้อมูลที่อยู่จัดส่ง",
+      "description": "กรุณากรอกข้อมูลที่อยู่จัดส่งสินค้าค่ะ",
+      "textColor": "#FFFFFF",
+      "backgroundColor": "message is-warning my-margin-top"
+    },
+    {
+      "id": 1.1,
+      "text": "พบข้อผิดพลาด",
+      "description": "สาเหตุ: ",
+      "textColor": "#FFFFFF",
+      "backgroundColor": "message is-danger my-margin-top"
+    },
+    {
+      "id": 2.1,
+      "text": "พบข้อผิดพลาด",
+      "description": "สาเหตุ: ",
+      "textColor": "#FFFFFF",
+      "backgroundColor": "message is-danger my-margin-top"
+    },
+    {
+      "id": 3.0,
+      "text": "ได้รับแจ้งชำระเงินแล้ว",
+      "description": "รอทีมงานตรวจสอบซักครู่นะคะ",
+      "textColor": "#4a4a4a",
+      "backgroundColor": "message is-primary my-margin-top"
+    },
+    {
+      "id": 4.0,
+      "text": "คำสั่งซื้อสำเร็จ",
+      "description": "เรากำลังแพ็คสินค้าของท่านค่ะ",
+      "textColor": "#FFFFFF",
+      "backgroundColor": "message is-success my-margin-top"
+    },
+    {
+      "id": 5.0,
+      "text": "ส่งสินค้าแล้ว",
+      "description": "ตรวจสอบสถานะการจัดส่งได้ที่:",
+      "textColor": "#FFFFFF",
+      "backgroundColor": "message is-success my-margin-top"
+    }
+  ]
+}

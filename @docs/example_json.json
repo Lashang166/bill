@@ -1,0 +1,41 @@
+
+{
+    AgentCode: "AGENT-01"
+    AgentCommission: "0.00"
+    AgentMobile: "09xxxxxxxx"
+    AgentName: "Agent Name 01"
+    AgentPercent: "0.00"
+    AgentUrl: ""
+    BillDate: "2019-03-29"
+    BillDue: "2019-04-07"
+    BillErrorStatus: ""
+    BillNo: "20190402032420"
+    BillStatus: "3.0"
+    Data: "{"
+            ShipTypes":[
+                    {"description":"EMS","rate":30,"id":1},
+                    {"description":"LALAMOVE","rate":100,"id":2}
+                ],
+            "BankAccounts":[
+                    {"type":"COD"},
+                    {"BankName":"Bangkok Bank","abbr":"bbl","BankOwner":"ชื่อเจ้าของบัญชี","BankAccNo":"123-45678-90"}
+                ],
+            "items":[
+                    {"SKU":"SKU1","Description":"Item description 1","UnitName":"unit","PricePerUnit":120,"Amount":2,"image":"https://www.designevo.com/res/templates/thumb_small/blue-square-and-virtual-world.png"},
+                    {"SKU":"SKU2","Description":"Item description 2","UnitName":"unit","PricePerUnit":100,"Amount":1,"image":"https://www.designevo.com/res/templates/thumb_small/blue-square-and-virtual-world.png"}
+                ],
+            "SelectedShipType":2,
+            "Payment":{"BankAccount":{"type":"COD"}
+            },
+            "ShippingAddress":{"Name":"aaa bbb","Address":"123/1 m99","SubDistrict":"นาเกษม","District":"ทุ่งศรีอุดม","Province":"อุบลราชธานี","Postcode":"34160","Mobile":"099-12345678"}
+        }"
+    Datachannel: ""
+    DiscountType: "PERCENTAGE"
+    DiscountValue: "10.00"
+    TrackingNo: ""
+    VAddr: "Vendor Address 01"
+    VID: "49"
+    VLogo: "https://www.designevo.com/res/templates/thumb_small/blue-square-and-virtual-world.png"
+    VName: "Vendor Name 01"
+    id: "1"
+}
