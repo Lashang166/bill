@@ -36,6 +36,7 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
   // const [TotalValue, SetTotalValue] = useState(0);
   //console.log("BillDisplay:billData", billData);
   // const billData = billData ? billData : null;
+
   const BillDateStamp = new Date(billData.BillDate);
   const BillDueStamp = new Date(billData.BillDue);
   moment.locale("th");
@@ -146,7 +147,6 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
       Amount = 0;
     }
     disAmount += Amount
-    console.log("")
     
 
     return totalValue + Amount * parseFloat(item.PricePerUnit);
