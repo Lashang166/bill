@@ -124,7 +124,7 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
     
     //}
 
-    if(role === "Sale"){
+    if(role === "Seller"){
       setSaleDis(dis)  
     } 
   };
@@ -230,8 +230,8 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
             <div className="column is-3 has-text-right">
               {/* ========== Edit =============== */}
               {
-                role === "Sale" ?
-                <p className="control has-icons-left ">{item.PricePerUnit} บาท</p>
+                role === "Seller" ?
+                <p className="control has-icons-left is-pulled-right">{item.PricePerUnit} บาท</p>
                 :
                 <p className="control has-icons-left ">
                   <input type="number"
@@ -272,12 +272,12 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
               {/* ========== Edit =============== */}
 
 
-              <span className="is-pulled-right">
+              <strong className="is-pulled-right">
                 {formatMoney(
                   parseFloat(item.Amount) * parseFloat(item.PricePerUnit)
-                )}
-                บาท{" "}
-              </span>
+                )} 
+                  &nbsp;บาท{" "}
+              </strong>
             </div>
           </div>
         );

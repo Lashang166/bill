@@ -83,7 +83,7 @@ export default function BillTotal({
   
   useEffect(() => {
 
-    if(role === "Sale"){
+    if(role === "Seller"){
       let total = (TotalValue + PostalCharge) - saleDis;
       updateCODAndDiscount(saleDis, total);
     }
@@ -96,14 +96,13 @@ export default function BillTotal({
   useEffect(() => {
 
     setCOD(TotalValue + PostalCharge - discount);
-    if(role === "Sale"){
+    if(role === "Seller"){
      
       // (จำนวน * agentcommission) + ((จำนวน * ราคา) * agentpercent%)
        let dis = (Amount * commission) + TotalValue * (percent / 100)
       // setSaleDis(dis)
       let total = (TotalValue + PostalCharge) - saleDis;
-      console.log("ds", total);
-     // updateCODAndDiscount(saleDis, total);
+     
 
     }else{
       if (discounttype === "VALUE") {
@@ -245,12 +244,12 @@ export default function BillTotal({
           <div className="field">
             <span>ส่วนลด</span>{" "}
             {/* ====== edit ====== */}
-            { role === "Sale" ? 
-              <div className="select is-small" style={{ marginLeft: "5px" }}>
+            { role === "Seller" ? 
+              <div className="select is-small" style={{ display: "none" }}>
                 
               </div>
               :
-              <div>
+              <span>
                   <div className="select is-small" style={{ marginLeft: "5px" }}>
                     <select
                       value={discounttype}
@@ -275,12 +274,12 @@ export default function BillTotal({
                       focusItem(e);
                     }}
                   />
-            </div>
+            </span>
              
           }
             {/* ========= Edit ======= */}
               {
-                role === "Sale" ? 
+                role === "Seller" ? 
                 <span className="is-pulled-right has-text-danger">
                 - {formatMoney(saleDis)} บาท
                 </span>
@@ -299,7 +298,7 @@ export default function BillTotal({
       <div>
         <strong className="is-size-5">รวมเป็นเงิน</strong>
         { 
-          role === "Sale"? 
+          role === "Seller"? 
           <strong className="is-pulled-right is-size-5 has-text-success">
             {formatMoney(TotalValue + PostalCharge - saleDis)} บาท
           </strong>
