@@ -46,12 +46,15 @@ export default function BillTotal({
   role,
   commission,
   percent,
-  Amount
+  Amount,
+  saleDis,
+  setSaleDis
 }) {
   const [discount, setdiscount] = useState(Discount);
   const [discounttype, setdiscounttype] = useState(DiscountType);
   const [discountvalue, setdiscountvalue] = useState(0);
   const [discountpercent, setdiscountpercent] = useState(0);
+  //const [saleDis, setSaleDis] = useState(0)
   const [codstatus, setcodstatus] = useState(SelectedShipCOD == true ? 1 : 0);
 
 
@@ -75,24 +78,32 @@ export default function BillTotal({
       //COD = (TotalValue + PostalCharge) - discount;
     }
   };
+  //edit
+
   
+  useEffect(() => {
+
+    if(role === "Sale"){
+      let total = (TotalValue + PostalCharge) - saleDis;
+      updateCODAndDiscount(saleDis, total);
+    }
+  
+  },[saleDis])
+
+
   //updateCOD();
 
   useEffect(() => {
 
     setCOD(TotalValue + PostalCharge - discount);
     if(role === "Sale"){
-
+     
       // (จำนวน * agentcommission) + ((จำนวน * ราคา) * agentpercent%)
-      let dis = (Amount * commission) + TotalValue * (percent / 100)
-      console.log("Amount", Amount);
-      console.log("percent", percent / 100);
-      console.log("commission", commission);
-      console.log("TotalValue", TotalValue);
-      console.log("percent", percent);
-      setdiscount(dis)
-      let total = (TotalValue + PostalCharge) - dis
-      updateCODAndDiscount(dis, total)
+       let dis = (Amount * commission) + TotalValue * (percent / 100)
+      // setSaleDis(dis)
+      let total = (TotalValue + PostalCharge) - saleDis;
+      console.log("ds", total);
+     // updateCODAndDiscount(saleDis, total);
 
     }else{
       if (discounttype === "VALUE") {
@@ -268,9 +279,16 @@ export default function BillTotal({
              
           }
             {/* ========= Edit ======= */}
-            <span className="is-pulled-right has-text-danger">
-              - {formatMoney(discount)} บาท
-            </span>
+              {
+                role === "Sale" ? 
+                <span className="is-pulled-right has-text-danger">
+                - {formatMoney(saleDis)} บาท
+                </span>
+              :
+              <span className="is-pulled-right has-text-danger">
+                - {formatMoney(discount)} บาท
+              </span>
+              }
           </div>
         </div>
       </div>
@@ -280,9 +298,17 @@ export default function BillTotal({
       </div>
       <div>
         <strong className="is-size-5">รวมเป็นเงิน</strong>
-        <strong className="is-pulled-right is-size-5 has-text-success">
-          {formatMoney(TotalValue + PostalCharge - discount)} บาท
-        </strong>
+        { 
+          role === "Sale"? 
+          <strong className="is-pulled-right is-size-5 has-text-success">
+            {formatMoney(TotalValue + PostalCharge - saleDis)} บาท
+          </strong>
+          :
+          <strong className="is-pulled-right is-size-5 has-text-success">
+            {formatMoney(TotalValue + PostalCharge - discount)} บาท
+          </strong>
+
+        }
       </div>
 
       {/** 

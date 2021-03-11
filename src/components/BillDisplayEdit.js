@@ -36,7 +36,7 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
   // const [TotalValue, SetTotalValue] = useState(0);
   //console.log("BillDisplay:billData", billData);
   // const billData = billData ? billData : null;
-
+  const [saleDis, setSaleDis] = useState(0)
   const BillDateStamp = new Date(billData.BillDate);
   const BillDueStamp = new Date(billData.BillDue);
   moment.locale("th");
@@ -55,12 +55,45 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
     // console.log("setScroll", scrollPos);
     setScrollTopPosition(scrollPos);
   };
+
+  let disAmount = 0;
+  
+
+  let total = billDataData.items.reduce((totalValue, item) => {
+
+    let Amount = parseFloat(item.Amount);
+
+    if(isNaN(Amount)){
+      Amount = 0;
+    }
+    disAmount += Amount
+    
+
+    return totalValue + Amount * parseFloat(item.PricePerUnit);
+  }, 0);
+
+  //discount
+  // (จำนวน * agentcommission) + ((จำนวน * ราคา) * agentpercent%)
+  let dis = (disAmount * billData.AgentCommission) + total * (billData.AgentPercent / 100)
+  // console.log("dis", dis);
+
   useEffect(() => {
+    setSaleDis(dis)
     window.addEventListener("scroll", setScroll);
     return () => {
       window.removeEventListener("scroll", setScroll);
     };
   });
+
+  // useEffect(() => {
+
+  //   if(user.amrole === "Sale"){
+  //     updateCODAndDiscount(saleDis, total);
+  //   }
+  
+  // },[saleDis])
+
+
 
   const updateCODAndDiscount = (input, cod) => {
     setCOD(cod);
@@ -73,7 +106,7 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
 
   const updateCODAndItem = (input, cod) => {
     setCOD(cod);
-    updateBillData({
+    updateBillData({ 
       ...billData,
       Data: { ...billData.Data, COD: cod, items: input },
     })
@@ -136,23 +169,7 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
           : 0
       );*/
   
-  let disAmount = 0;
-  
 
-  let total = billDataData.items.reduce((totalValue, item) => {
-
-    let Amount = parseFloat(item.Amount);
-
-    if(isNaN(Amount)){
-      Amount = 0;
-    }
-    disAmount += Amount
-    
-
-    return totalValue + Amount * parseFloat(item.PricePerUnit);
-  }, 0);
-
-  console.log("total", total)
 
   let postalCharge = billDataData.ShipTypes.reduce(
     (Value, ShipType) =>
@@ -172,7 +189,6 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
     //axios.post(`${apiServer}/ci-api/Bills/updateStatus`, params)
     updateStatus1(params)
       .then(result => {
-        
         if (result.data.result === "OK") {
         }
       })
@@ -407,6 +423,12 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
                   />
                   <hr />
                   <BillItems
+                    //edit
+                    updateCODAndDiscount={updateCODAndDiscount}
+                    total={total}
+                    dis={saleDis}
+                    setSaleDis={setSaleDis}
+                    //edit
                     items={billData ? billDataData.items : []}
                     setBillItems={item =>
                       updateBillData({
@@ -469,13 +491,14 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
                       <hr />
                     </div>
                   ) : null}
-                  { console.log("bildata", disAmount) }
                   <BillTotal
                     //edit
                     role={user.amrole}
                     commission={billData.AgentCommission}
                     percent={billData.AgentPercent}
                     Amount={disAmount}
+                    saleDis={saleDis}
+                    setSaleDis={setSaleDis}
                     //edit
                     TotalValue={total}
                     PostalCharge={postalCharge}

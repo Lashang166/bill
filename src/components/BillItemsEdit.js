@@ -30,7 +30,7 @@ axios.interceptors.request.use(
 );
 */
 
-export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD, updateCODAndItem }) {
+export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD, updateCODAndItem, dis,  updateCODAndDiscount, total, setSaleDis}) {
   const [billitems, setbillitem] = useState(items);
   const [editBill, setEditBill] = useState(false);
   const [token, setToken] = useState("");
@@ -100,6 +100,7 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
     //if (!isNaN(event.target.value) && event.target.value) {
     //const newValue = event.target.value;
 
+    
     let newValue = billitems.map((item, _idx) => {
       if (_idx !== i) return item;
 
@@ -122,6 +123,10 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
     //setBillItems(newValue);
     
     //}
+
+    if(role === "Sale"){
+      setSaleDis(dis)  
+    } 
   };
 
   const oneClick = item => {
@@ -139,6 +144,7 @@ export default function BillItems({ items, setBillItems, UpdateCOD, COD, setCOD,
       };
       setbillitem([...billitems, newItem]);
       setBillItems([...billitems, newItem]);
+
 
       setEditBill(false);
     } else {
