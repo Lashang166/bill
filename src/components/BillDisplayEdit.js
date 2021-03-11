@@ -116,7 +116,7 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
       if (Ship.cod_status == 1){
         newBank.push({ type: "COD" });
         hadCOD = true;
-      }
+      }  
 
       updateBillData({
         ...billData,
@@ -135,19 +135,24 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
           : 0
       );*/
   
-  let Amount = 0;
+  let disAmount = 0;
   
 
   let total = billDataData.items.reduce((totalValue, item) => {
 
-    Amount += parseFloat(item.Amount);
+    let Amount = parseFloat(item.Amount);
 
     if(isNaN(Amount)){
       Amount = 0;
     }
+    disAmount += Amount
+    console.log("")
+    
 
-    return  + Amount * parseFloat(item.PricePerUnit);
+    return totalValue + Amount * parseFloat(item.PricePerUnit);
   }, 0);
+
+  console.log("total", total)
 
   let postalCharge = billDataData.ShipTypes.reduce(
     (Value, ShipType) =>
@@ -464,13 +469,13 @@ export default function BillDisplay({setBillData, billData, updateBillData, onCl
                       <hr />
                     </div>
                   ) : null}
-                  { console.log("bildata", Amount) }
+                  { console.log("bildata", disAmount) }
                   <BillTotal
                     //edit
                     role={user.amrole}
                     commission={billData.AgentCommission}
                     percent={billData.AgentPercent}
-                    Amount={Amount}
+                    Amount={disAmount}
                     //edit
                     TotalValue={total}
                     PostalCharge={postalCharge}

@@ -59,10 +59,6 @@ axios.interceptors.request.use(
 export default function BillDisplay({ billData, updateBillData, actionType , COD, setCOD, setBillData, lineNotif, replaceEmoji }) {
 
 
-
-
-
-
   if (actionType) {
     //console.log("action = " + actionType);
   } else {

@@ -85,7 +85,7 @@ export default function BillTotal({
 
       // (จำนวน * agentcommission) + ((จำนวน * ราคา) * agentpercent%)
       let dis = (Amount * commission) + TotalValue * (percent / 100)
-      // 
+      console.log("TotalVlue", TotalValue);
       setdiscount(dis)
       let total = (TotalValue + PostalCharge) - dis
       updateCODAndDiscount(dis, total)

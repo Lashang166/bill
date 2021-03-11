@@ -30,7 +30,7 @@ const SwitchStyled = styled.div`
   -webkit-transition: all .25s ease-out;
   transition: all .25s ease-out;
   content: '';
-
+}
 `;
 
 export default function QuickView({ 
